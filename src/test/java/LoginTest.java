@@ -9,10 +9,11 @@ public class LoginTest extends Config {
      @Test
     public void Login ()throws Exception {
 
-      driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div")).click();
-      driver.findElement(By.xpath("/html/body/div[2]/div/div/div/form/input[1]")).sendKeys(""); // need to put value  - xpath is example of selector
-      driver.findElement(By.xpath("/html/body/div[2]/div/div/div/form/input[2]")).sendKeys(""); // need to put value  - xpath is example of selector
-      driver.findElement(By.xpath("/html/body/div[2]/div/div/div/form/input[3]")).click();
+      driver.findElement(By.xpath("//*[@id=\"myAccountDropdown\"]/button/span")).click();
+      driver.findElement(By.xpath("//*[@id=\"myaccount-dropdown\"]/div/div/div[2]/a[1]")).click();
+      driver.findElement(By.xpath("//*[@id=\"EmailAddress\"]")).sendKeys("blackflame121@gmail.com"); // need to put value  - xpath is example of selector
+      driver.findElement(By.xpath("//*[@id=\"Password\"]")).sendKeys("testing123456"); // need to put value  - xpath is example of selector
+      driver.findElement(By.xpath("//*[@id=\"signin\"]")).click();
 
     }
     @Test
